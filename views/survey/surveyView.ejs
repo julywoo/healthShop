@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <%- include('../partials/head') %>
+  </head>
+  <body>
+    <%- include('../partials/nav') %>
+
+    <div class="container mb-3">
+
+      <h2 class="mb-3">설문시작</h2>
+      <form action="/survey/result" method="post">
+      <div>
+          <% survey.forEach(function(survey) { %>
+                  <div class="ellipsis">
+                    <ul><span><%= survey.surveyQuestion %></span>
+
+                    <li><input type="radio" name="<%= survey.questionNo%>" value="1"><span> <%= survey.reply1 %> </<span></li>
+                    <li><input type="radio" name="<%= survey.questionNo%>" value="2"><span> <%= survey.reply2 %> </<span></li>
+                    <li><input type="radio" name="<%= survey.questionNo%>" value="3"><span> <%= survey.reply3 %> </<span></li>
+                    <li><input type="radio" name="<%= survey.questionNo%>" value="4"><span> <%= survey.reply4 %> </<span></li>
+                    </ul>
+                  </div>
+
+          <% }) %>
+      </div>
+      <div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </div>
+
+    </form>
+    </div>
+  </body>
+</html>

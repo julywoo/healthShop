@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <%- include('../partials/head') %>
+  </head>
+  <body>
+    <%- include('../partials/nav') %>
+
+    <div class="container mb-3">
+
+      <h2 class="mb-3">설문 결과</h2>
+      <form action="/survey/result" method="post">
+      <div>
+          <p> <%= maxVal%> </p>
+          <p> <%= resultDesc%> </p>
+          <p> <%= resultIndicator%> </p>
+          <p> <%= resultDisease%> </p>
+      </div>
+      <div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </div>
+
+    </form>
+    </div>
+  </body>
+</html>

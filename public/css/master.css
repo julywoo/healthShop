@@ -1,0 +1,17 @@
+/* public/css/master.css */
+
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+ul{
+  text-align: center;
+}
+li {
+  display: flex;
+  text-align: left;
+}
+
+li p {
+  width: 100%;
+}
