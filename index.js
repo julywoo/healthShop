@@ -11,8 +11,6 @@ mongoose.set('useFindAndModify', false);
 mongoose.set('useCreateIndex', true);
 mongoose.set('useUnifiedTopology', true);
 mongoose.connect(
-  "mongodb+srv://healthAdmin:admin2021!@healthshop.npi1i.mongodb.net/healthshop?retryWrites=true&w=majority",
-  //"mongodb+srv://healthAdmin:"+mongoosePW.mongoPw+"@healthshop.npi1i.mongodb.net/test",
   { useUnifiedTopology: true, useNewUrlParser: true }
 );
 
